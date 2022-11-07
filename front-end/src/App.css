@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+#oldChat {
+  position: fixed;
+  /* top: 10px;
+  left: 10px;
+  bottom: 10px; */
+  width: 230;
+  max-height: 50%;
+  overflow-y: scroll;
+}
