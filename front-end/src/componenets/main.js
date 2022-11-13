@@ -64,16 +64,16 @@ export default function Chat() {
       }, 100);
     });
 
-    setTimeout(async() => {
-    await axios.post("http://localhost:4000/messages", { name, message:"" }).then((res) => {
-      const q = res.data.messages.filter(
-        (msg) => parseInt(msg.split(":")[5]) < date
-        );
+  //   setTimeout(async() => {
+  //   await axios.post("http://localhost:4000/messages", { name, message:"" }).then((res) => {
+  //     const q = res.data.messages.filter(
+  //       (msg) => parseInt(msg.split(":")[5]) < date
+  //       );
       
-      let live = res.data.messages.slice(q.length);
-      setMessage(live);
-    });
-  }, 100);
+  //     let live = res.data.messages.slice(q.length);
+  //     setMessage(live);
+  //   });
+  // }, 100);
   };
   const joinHandler = async (e) => {
     e.preventDefault();

@@ -101,11 +101,11 @@ app.post("/user/:name", async (req, res) => {
 app.post("/messages", async (req, res) => {
   try {
     const data = req.body;
-    if (data.message === "") {
-      io.emit("message-added");
-      console.log("Empty message");
-      res.status(201).json(users);
-    }
+    // if (data.message === "") {
+    //   io.emit("message-added");
+    //   console.log("Empty message");
+    //   res.status(201).json(users);
+    // }
     const users = await User.findAll();
     await users.forEach(async (user) => {
       await user.update({
